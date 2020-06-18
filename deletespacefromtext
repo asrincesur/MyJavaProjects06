@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+
+public class deleteSpace {
+
+	
+	
+    public static  String  delete(String srt) {
+    	
+    	char[] letters = srt.toCharArray();
+    	    List<Character> Initial_text = new ArrayList<>();
+    	for(char ch : letters) {
+    		  Initial_text.add(ch);
+        	}    	
+    	Iterator<Character> PIT= Initial_text.iterator(); 	
+    	while(PIT.hasNext()) {
+    		if(  PIT.next()== ' ')
+    			PIT.remove(); 		
+    	}    	
+    	srt=Initial_text.toString();   	 	
+		return srt;
+    }
+	
+	
+	
+	public static void main(String[] args) {
+		  
+		String example = "a asd asfsfvbsf    asgdfd    uSGFJHASDLJFAIS    sdgjhaf";
+		
+		System.out.printf(delete(example));
+		
+
+	}
+
+}
